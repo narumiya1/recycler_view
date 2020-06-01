@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">recycler_view</string>
+    <string name="coach_name">Coach Name</string>
+    <string name="list">List</string>
+    <string name="description">Deskripsi</string>
+    <string name="form">from</string>
+</resources>
