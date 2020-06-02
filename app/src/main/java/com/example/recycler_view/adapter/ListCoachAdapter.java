@@ -71,7 +71,7 @@ public class ListCoachAdapter extends RecyclerView.Adapter<ListCoachAdapter.List
             super(itemView);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);
-            tvForm = itemView.findViewById(R.id.tv_item_from) ;
+            tvForm = itemView.findViewById(R.id.tv_item_from);
         }
     }
 

@@ -12,7 +12,7 @@ public class CoachData {
 
             {" Rafael Benitez", "Madrid, Spain ", "https://vignette.wikia.nocookie.net/liverpoolfc/images/7/7f/RBenitez.jpg/revision/latest?cb=20131122010547"},
 
-            {" Kenny Dalglish", "Glasgow, Scotland", "https://vignette.wikia.nocookie.net/liverpoolfc/images/0/01/Kennygalglish111.jpg/revision/latest?cb=20110602022431"},
+            {" Kenny Dalglish", "Glasgow, Scotland", "https://images.newindianexpress.com/uploads/user/imagelibrary/2020/4/11/w900X450/Kenny_Dalglish_AP.jpg"},
 
             {" Louis Van Gaal", "Amsterdam, Netherland", "https://vignette.wikia.nocookie.net/the-football-database/images/6/67/Netherlands_L._van_Gaal_003.png/revision/latest?cb=20140919113617"},
 

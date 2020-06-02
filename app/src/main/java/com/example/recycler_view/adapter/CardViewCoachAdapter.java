@@ -20,10 +20,10 @@ import java.util.ArrayList;
 
 public class CardViewCoachAdapter extends RecyclerView.Adapter<CardViewCoachAdapter.CardViewVolder> {
 
-    private ArrayList<Coach> listOfCoach ;
+    private ArrayList<Coach> listCoach;
 
-    public CardViewCoachAdapter(ArrayList<Coach> list){
-        this.listOfCoach = list ;
+    public CardViewCoachAdapter(ArrayList<Coach> list) {
+        this.listCoach = list;
     }
 
     @NonNull
@@ -36,25 +36,27 @@ public class CardViewCoachAdapter extends RecyclerView.Adapter<CardViewCoachAdap
     @Override
     public void onBindViewHolder(@NonNull final CardViewVolder holder, int position) {
 
-        Coach coach = listOfCoach.get(position);
+        Coach coach = listCoach.get(position);
+
         Glide.with(holder.itemView.getContext())
                 .load(coach.getPhoto())
-                .apply(new RequestOptions().override(350,550))
+                .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgPhoto);
+
         holder.tvName.setText(coach.getName());
         holder.tvFrom.setText(coach.getFrom());
 
         holder.btnFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "favourite" + listOfCoach.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(holder.itemView.getContext(), "favourite" + listCoach.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
             }
         });
 
         holder.btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "share" + listOfCoach.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(holder.itemView.getContext(), "share" + listCoach.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -62,7 +64,7 @@ public class CardViewCoachAdapter extends RecyclerView.Adapter<CardViewCoachAdap
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "kamu memilih "+listOfCoach.get(holder.getAdapterPosition()).getName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(holder.itemView.getContext(), "kamu memilih " + listCoach.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -70,23 +72,22 @@ public class CardViewCoachAdapter extends RecyclerView.Adapter<CardViewCoachAdap
 
     @Override
     public int getItemCount() {
-        return listOfCoach.size();
+        return listCoach.size();
     }
 
-    public class CardViewVolder extends RecyclerView.ViewHolder {
+    class CardViewVolder extends RecyclerView.ViewHolder {
 
-        ImageView imgPhoto ;
-        TextView tvName , tvFrom ;
-        Button btnFav, btnShare ;
+        ImageView imgPhoto;
+        TextView tvName, tvFrom;
+        Button btnFav, btnShare;
 
-        public CardViewVolder(View itemView) {
+        CardViewVolder(View itemView) {
             super(itemView);
-            imgPhoto = itemView.findViewById(R.id.img_item_photo);
+            imgPhoto = itemView.findViewById(R.id.img_view_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvFrom = itemView.findViewById(R.id.tv_item_from);
             btnFav = itemView.findViewById(R.id.btn_set_favourite);
             btnShare = itemView.findViewById(R.id.btn_share);
-
 
 
         }
